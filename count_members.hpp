@@ -52,4 +52,7 @@ namespace detail
 template<typename T>
 using count_members = detail::count_members<T , 1 , ::std::true_type>;
 
+template<typename T>
+static constexpr ::std::size_t count_members_v = count_members<T>::value;
+
 }
