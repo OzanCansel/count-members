@@ -12,17 +12,17 @@ Counts the members of an aggregate type.
 
 struct a_type
 {
-  int a;
-  int b;
-  int c;
+    int a;
+    int b;
+    int c;
 };
 
 int main()
 {
-  std::cout << "a_type has "
-            << aggr::count_members_v<a_type>
-            << " members."
-            << std::endl;
+    std::cout << "a_type has "
+              << aggr::count_members_v<a_type>
+              << " members."
+              << std::endl;
 }
 
 ```
