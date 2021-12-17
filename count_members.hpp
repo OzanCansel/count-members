@@ -13,7 +13,9 @@ namespace detail
 
     template<typename T , int Idx>
     struct count_members<T , Idx , ::std::false_type> : ::std::false_type
-    {   };
+    {
+        static_assert( ::std::is_aggregate_v<T> , "T must be an aggregate type." );
+    };
 
     template<typename T , int NArgs>
     struct count_members<T , NArgs , ::std::true_type>
